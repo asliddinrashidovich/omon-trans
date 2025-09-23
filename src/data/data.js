@@ -55,3 +55,26 @@ export const services = [
         ]
     },
 ]
+
+export const feature = [
+    {
+        title: "Ishonchlilik",
+        text: "Biz yuklaringizni o‘z zimmasiga olgan holda, ularga to‘liq mas’uliyat bilan qaramiz. Har bir jo‘natma barcha mumkin bo‘lgan xavflardan himoyalangan va sug‘urta qoplomi ostidadir. Bu sizga bizning xizmatimizga ishonchingiz komil bo‘lishi uchun asos yaratadi. Xavfsizlik – bu bizning ishimizning eng muhim tamalidir.",
+        img: "/images/feature5.svg"
+    },
+    {
+        title: "24/7 Qollab quvvatlash",
+        text: "Bizning qo‘llab-quvvatlash xizmatimiz kunning har qanday soati va haftaning har qanday kunida, hatto bayramlarda ham ishlaydi. Yuklaringiz holati to‘g‘risida doimiy yangilanishlar olishingiz va istalgan payt savollaringizga javob olishingiz mumkin. Biz sizga doimiy aloqa va aniq monitoring xizmatini taqdim etamiz.",
+        img: "/images/feature6.svg"
+    },
+    {
+        title: "Global Hamkorlar",
+        text: "Dunyoning 50 dan ortiq mamlakatlaridagi keng hamkorlik tarmog‘imiz tufayli biz xalqaro jo‘natmalarni eng yuqori darajada amalga oshiramiz. Bu hamkorlik tarmog‘i bizga yuklaringizni tez, ishonchli va samarali tarzda istalgan joyga etkazib berish imkoniyatini beradi. Bizning global qamrovimiz – bu sizning ishonchingiz.",
+        img: "/images/feature7.svg"
+    },
+    {
+        title: "Zamonaviy Texnologiyalar",
+        text: "Biz yuklaringizni harakatlanishi davomida ilg‘or texnologiyalar yordamida doimiy kuzatib boramiz. Real vaqt rejimida yukingizning aniq joylashuvi va holati haqida ma’lumot olishingiz mumkin. Bu sizga qulaylik va ishonch yaratadi, chunki siz har doim yukingiz to‘g‘risida to‘liq ma’lumotga egasiz.",
+        img: "/images/feature8.svg"
+    },
+]
