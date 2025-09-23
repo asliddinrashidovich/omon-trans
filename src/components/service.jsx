@@ -2,13 +2,16 @@ import { services } from "../data/data"
 
 function Service() {
   return (
-    <section className="px-3 md:px-10 pb-[70px]">
+    <section className="px-3 md:px-10 pb-[40px] md:pb-[70px]">
         <div className="max-w-[1368px] mx-auto">
-            <div className="w-full flex justify-center mb-[80px]">
-                <h2 className="text-[55px] font-[700] py-[15px] px-[60px] text-center bg-[#1A00E1] rounded-[35px] text-[#fff]">Xizmatlar</h2>  
+            <div className="flex justify-center">
+                <div className="flex justify-center flex-col items-center mb-[28px] md:mb-[70px] py-[10px] sm:py-[15px] px-[40px] sm:px-[60px] text-center bg-[#1A00E1] rounded-[35px] w-full md:w-auto">
+                    <h2 className="text-[35px] lg:text-[55px] font-[700]  text-[#fff]">Xizmatlar</h2>  
+                    <hr className="md:hidden flex border-[1px] border-[#FFFFFF] w-[130px] mt-[7px]"/>
+                </div>
             </div>
-            <div className="pt-[67px] px-[108px] pb-[58px] border-[1px] border-[#1A00E1] rounded-[50px]">
-                <h3 className="font-[500] text-[35px] leading-[122%] text-center mb-[35px]">Biz xizmatlarimizga 100% javob beramiz eng ishonchli logistika kompaniyasi </h3>
+            <div className="bg-[#fff] pt-[35px] md:pt-[67px] px-[30px] md:px-[108px] pb-[58px] border-[1px] border-[#1A00E1] rounded-[50px]">
+                <h3 className="font-[500] text-[20px] md:text-[35px] leading-[122%] text-center mb-[20px] md:mb-[35px]">Biz xizmatlarimizga 100% javob beramiz eng ishonchli logistika kompaniyasi </h3>
                 <div className="flex justify-center flex-wrap gap-[14px]">
                     {services.map(item => (
                         <div key={item.title} className="bg-[#F3F3F3] max-w-[341px] rounded-[50px] box-shadow overflow-hidden">

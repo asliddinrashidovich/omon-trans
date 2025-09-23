@@ -1,36 +1,54 @@
 function About() {
   return (
-    <section className="px-3 md:px-10 py-[70px]">
+    <section className="px-3 md:px-10 py-[40px] md:py-[70px]">
         <div className="max-w-[1368px] mx-auto">
-            <div className="w-full flex justify-center mb-[70px]">
-                <h2 className="text-[55px] font-[700] py-[15px] px-[60px] text-center bg-[#1A00E1] rounded-[35px] text-[#fff]">BIZ HAQIMIZDA</h2>  
+            <div className="flex justify-center">
+                <div className="flex justify-center flex-col items-center mb-[28px] md:mb-[70px] py-[10px] sm:py-[15px] px-[40px] sm:px-[60px] text-center bg-[#1A00E1] rounded-[35px] w-full md:w-auto">
+                    <h2 className="text-[35px] lg:text-[55px] font-[700]  text-[#fff] ">BIZ HAQIMIZDA</h2>  
+                    <hr className="md:hidden flex border-[1px] border-[#FFFFFF] w-[130px] mt-[7px]"/>
+                </div>
             </div>
-            <div className="grid grid-cols-2 gap-[10px] mb-[10px]">
-                <div className="p-[42px] my-box px-[35px] border-[#0C114666] border-[1px] border-dashed dashes-[20] rounded-[50px]">
-                    <p className="text-[32px] font-[700] leading-[122%]"><span className="text-[#10186D]">OMON TRANS</span>{`,- bu O'zbekistondagi yetakchi logistika va transport kompaniyasi bo'lib, O’zbekiston bo’ylab yuk tashish, boj clearance va zanjir boshqaruvi xizmatlarini taklif etadi. `}</p>
+            <div className="grid grid-cols-1 grid-rows-2 md:grid-rows-1 md:grid-cols-2 gap-[10px] mb-[10px]">
+                <div className="py-[26px] md:py-[42px] relative my-box px-[26px] md:px-[35px] border-[#0C114666] border-[1px] border-dashed rounded-[50px]">
+                    <div className="z-[10] absolute bottom-0 left-[50%] translate-x-[-50%] w-[200px] md:w-[300px] mx-auto">
+                        <img src="/images/elipses/Ellipse1.svg" alt="elipse" />
+                    </div>
+                    <p className="z-[20] text-[18px] min-[800px]:text-[24px] min-[1050px]:text-[32px] font-[700] leading-[122%]"><span className="text-[#10186D]">OMON TRANS</span>{`,- bu O'zbekistondagi yetakchi logistika va transport kompaniyasi bo'lib, O’zbekiston bo’ylab yuk tashish, boj clearance va zanjir boshqaruvi xizmatlarini taklif etadi. `}</p>
                     <br />
-                    <p className="text-[32px] font-[700] leading-[122%]">{`Bizning missiyamiz - mijozlarimizga ishonchli, tez va innovatsion logistika yechimlarini taqdim etish orqali ularning biznesi rivojlanishiga hissa qo'shish.`}</p>
+                    <p className="z-[20] relative text-[18px] min-[800px]:text-[24px] min-[1050px]:text-[32px] font-[700] leading-[122%]">{`Bizning missiyamiz - mijozlarimizga ishonchli, tez va innovatsion logistika yechimlarini taqdim etish orqali ularning biznesi rivojlanishiga hissa qo'shish.`}</p>
                 </div>
-                <div className="rounded-[50px]">
-                    <img src="/images/model.jpg" alt="model" />
+                <div className="rounded-[23px] overflow-hidden border-[#0C114666] border-[1px] border-dashed">
+                    <img src="/images/model.jpg" alt="model" className="object-cover w-full h-full"/>
                 </div>
             </div>
-            <div className="grid grid-cols-4 gap-[5px]">
-                <div className="border-[1px] border-[#1A00E166] border-dashed rounded-[50px] h-[338px] flex items-center justify-center flex-col gap-[6px]">
-                    <h3 className="text-[#0C1146] text-[85px] font-[700]">12+</h3>
-                    <p className="text-[25px] font-[700] leading-[122%]">Yillik Tajriba</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[5px]">
+                <div className="relative border-[1px] border-[#1A00E166] border-dashed rounded-[50px] h-[228px] md:h-[338px] flex items-center justify-center flex-col gap-[6px]">
+                    <h3 className="z-[20] text-[#0C1146] text-[85px] font-[700]">12+</h3>
+                    <p className="z-[20] text-[25px] font-[700] leading-[122%] text-center">Yillik Tajriba</p>
+                    <div className="z-[10] absolute  left-0 top-[50%] translate-y-[-50%]">
+                        <img src="/images/elipses/Ellipse2.svg" alt="elipse" />
+                    </div>
                 </div>
-                <div className="border-[1px] border-[#1A00E166] border-dashed rounded-[50px] h-[338px] flex items-center justify-center flex-col gap-[6px]">
-                    <h3 className="text-[#0C1146] text-[70px] font-[700]">3000+</h3>
-                    <p className="text-[25px] font-[700] leading-[122%]">Korporativ Mijozlar</p>
+                <div className="relative border-[1px] border-[#1A00E166] border-dashed rounded-[50px] h-[228px] md:h-[338px] flex items-center justify-center flex-col gap-[6px]">
+                    <h3 className="z-[20] text-[#0C1146] text-[70px] font-[700]">3000+</h3>
+                    <p className="z-[20] text-[25px] font-[700] leading-[122%] text-center">Korporativ Mijozlar</p>
+                    <div className="z-[10] absolute  bottom-0 left-[50%] translate-x-[-50%]">
+                        <img src="/images/elipses/Ellipse3.svg" alt="elipse" />
+                    </div>
                 </div>
-                <div className="border-[1px] border-[#1A00E166] border-dashed rounded-[50px] h-[338px] flex items-center justify-center flex-col gap-[6px]">
-                    <h3 className="text-[#0C1146] text-[60px] font-[700]">12000+</h3>
-                    <p className="text-[25px] font-[700] leading-[122%]">Muvaffaqiyatli Yetkazish</p>
+                <div className="relative border-[1px] border-[#1A00E166] border-dashed rounded-[50px] h-[228px] md:h-[338px] flex items-center justify-center flex-col gap-[6px]">
+                    <h3 className="z-[20] text-[#0C1146] text-[60px] font-[700]">12000+</h3>
+                    <p className="z-[20] text-center text-[25px] font-[700] leading-[122%]">Muvaffaqiyatli Yetkazish</p>
+                    <div className="z-[10] absolute  top-0 left-[50%] translate-x-[-50%]">
+                        <img src="/images/elipses/Ellipse4.svg" alt="elipse" />
+                    </div>
                 </div>
-                <div className="border-[1px] border-[#1A00E166] border-dashed rounded-[50px] h-[338px] flex items-center justify-center flex-col gap-[6px]">
-                    <h3 className="text-[#0C1146] text-[85px] font-[700]">15+</h3>
-                    <p className="text-[25px] font-[700] leading-[122%]">Xalqaro Hamkorlar</p>
+                <div className="relative border-[1px] border-[#1A00E166] border-dashed rounded-[50px] h-[228px] md:h-[338px] flex items-center justify-center flex-col gap-[6px]">
+                    <h3 className="z-[20] text-[#0C1146] text-[85px] font-[700]">15+</h3>
+                    <p className="z-[20] text-[25px] font-[700] leading-[122%]">Xalqaro Hamkorlar</p>
+                    <div className="z-[10] absolute  right-0 top-[50%] translate-y-[-50%]">
+                        <img src="/images/elipses/Ellipse5.svg" alt="elipse" />
+                    </div>
                 </div>
             </div>
         </div>

@@ -13,7 +13,7 @@ function Header() {
         setLang(language)
     }
   return (
-    <header className="px-3 md:px-10 py-[10px] fixed w-full">
+    <header className="px-3 md:px-10 py-[10px] fixed w-full z-100">
         <div className="max-w-[1368px] mx-auto flex items-center justify-between gap-[10px]">
             <a href="/" className="z-100 lg:flex hidden shrink-0">
                 <img src="/images/logo.svg" alt="logo"/>
