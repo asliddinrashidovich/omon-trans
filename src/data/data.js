@@ -1,3 +1,32 @@
+import { IoInformationCircle } from "react-icons/io5";
+import { GoHomeFill } from "react-icons/go";
+import { MdGroup, MdHomeRepairService } from "react-icons/md";
+import { FaStar } from "react-icons/fa6";
+
+
+export const navbar = [
+    {
+        title: "Bosh Sahifa",
+        icon: GoHomeFill
+    },
+    {
+        title: "Biz Haqimizda",
+        icon: IoInformationCircle
+    },
+    {
+        title: "Xizmatlar",
+        icon: MdHomeRepairService
+    },
+    {
+        title: "Afzalliklar",
+        icon: FaStar
+    },
+    {
+        title: "Hamkorlar",
+        icon: MdGroup
+    },
+]
+
 export const services = [
     {
         title: "Shaxardan Shaharga Yuk Tashish",

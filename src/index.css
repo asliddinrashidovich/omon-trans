@@ -11,6 +11,15 @@ body {
   background-color: #F4F4F6;
 }
 
+.navbar::before {
+  content: "";
+  position: absolute;
+  background: transparent;
+  width: 80px;
+  height: 80px;
+  left: -66px;
+  border-radius: 50%;
+}
 .paytone-one {
   font-family: 'Paytone One', sans-serif;
 }
@@ -24,10 +33,30 @@ body {
   background: linear-gradient(90deg, #10186D 0%, #1E2AAE 100%) !important;
 }
 .hero {
-  background-image: url(../images/showcase.png);
+  background-image: url(/images/showcase.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position: center bottom;
 }
 .box-shadow {
   box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.uz::before {
+  content: "";
+  width: 100px;
+  height: 100px; 
+  background-color: red;
+  background: url(/images/uzbekistan.png);
+}
+.menu {
+  background: rgba(255, 255, 255, 0.15);  
+  backdrop-filter: blur(10px);  
+  -webkit-backdrop-filter: blur(10px); 
+}
+
+@media (min-width: 1000px) {
+  .hero {
+    background-position: center center;
+  }
 }
