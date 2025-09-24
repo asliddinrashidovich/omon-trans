@@ -5,7 +5,7 @@ function Service() {
     const {t} = useTranslation()
     const servicesData = services(t)
   return (
-    <section className="px-3 md:px-10 pb-[40px] md:pb-[70px]">
+    <section id="Xizmatlar" className="px-3 md:px-10 pb-[40px] md:pb-[70px]">
         <div className="max-w-[1368px] mx-auto">
             <div className="flex justify-center">
                 <div className="flex justify-center flex-col items-center mb-[28px] md:mb-[70px] py-[10px] sm:py-[15px] px-[40px] sm:px-[60px] text-center bg-[#1A00E1] rounded-[35px] w-full md:w-auto">
@@ -17,7 +17,7 @@ function Service() {
                 <h3 className="font-[500] text-[20px] md:text-[35px] leading-[122%] text-center mb-[20px] md:mb-[35px]">{t("serviceHeader")}</h3>
                 <div className="flex justify-center flex-wrap gap-[14px]">
                     {servicesData.map(item => (
-                        <div key={item.title} className="bg-[#F3F3F3] max-w-[341px] rounded-[50px] box-shadow overflow-hidden">
+                        <div data-aos="fade-up"  key={item.title} className="bg-[#F3F3F3] max-w-[341px] rounded-[50px] box-shadow overflow-hidden">
                             <div className="bg-[#1A00E1] h-[95px]  rounded-tl-[50px] rounded-tr-[50px] flex justify-center items-center">
                                 <img src={item.img} alt={item.title} />
                             </div>

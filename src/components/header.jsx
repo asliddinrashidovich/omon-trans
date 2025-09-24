@@ -5,6 +5,7 @@ import HeaderSidebar from "./sidebar";
 import { useDispatch } from "react-redux";
 import { setLanguage } from "../reducers/languageSlice";
 import { useTranslation } from "react-i18next";
+import { Toaster } from "react-hot-toast";
 
 
 function Header() {
@@ -27,7 +28,8 @@ function Header() {
             <a href="/" className="z-100 lg:flex hidden shrink-0">
                 <img src="/images/logo.svg" alt="logo"/>
             </a>
-            <div className="bg-[#10186D] relative navbar px-[20px] py-[10px] lg:p-[10px] lg:w-full rounded-[17px] flex items-center justify-between">
+            <div><Toaster position="top-right" reverseOrder={false}/></div>
+            <div className="bg-[#10186D] z-20 relative navbar px-[20px] py-[10px] lg:p-[10px] lg:w-full rounded-[17px] flex items-center justify-between">
                 <a href="/" className="max-[600px]:text-[20px] text-nowrap text-[35px] font-[400] text-[#fff] lg:ml-[27px] paytone-one cursor-pointer">OMON TRANS</a>
                 <div className="flex gap-[10px]">
                     <ul className="min-[1250px]:flex items-center gap-[10px] hidden">
@@ -64,7 +66,7 @@ function Header() {
                 </div>
             </div>
             <div className="flex items-center gap-[10px]">
-                <button className="hidden min-[440px]:flex lg:hidden max-[600px]:py-[17px] py-[25px] active:bg-[#1E2AAE] translate-all duration-100 hover:bg-[#1425df] px-[32px] bg-[#1E2AAE] border-[#049BD2] max-[600px]:text-[15px] text-[#fff] text-[20px] leading-[100%] font-[400] border-[1px] font-montserrat rounded-[17px] cursor-pointer">{"Bog'lanish"}</button>
+                <button className="hidden min-[440px]:flex lg:hidden max-[600px]:py-[17px] py-[25px] active:bg-[#1E2AAE] translate-all duration-100 hover:bg-[#1425df] px-[32px] bg-[#1E2AAE] border-[#049BD2] max-[600px]:text-[15px] text-[#fff] text-[20px] leading-[100%] font-[400] border-[1px] font-montserrat rounded-[17px] cursor-pointer">{t("boglanish")}</button>
                 <HeaderSidebar/>
             </div>
         </div>

@@ -1,10 +1,19 @@
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next"
+import * as AOS from "aos";
+import "aos/dist/aos.css";
 
 function Partners() {
     const arr = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
     const {t} = useTranslation()
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,  
+            once: true,  
+        });
+    }, []);
   return (
-     <section className="px-3 md:px-10 pb-[40px] md:pb-[70px]">
+     <section id="Hamkorlar" className="px-3 md:px-10 pb-[40px] md:pb-[70px]">
         <div className="max-w-[1368px] mx-auto">
             <div className="flex justify-center">
                 <div className="flex justify-center flex-col items-center mb-[28px] md:mb-[70px] py-[10px] sm:py-[15px] px-[40px] sm:px-[60px] text-center bg-[#1A00E1] rounded-[35px]">

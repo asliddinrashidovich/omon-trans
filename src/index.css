@@ -1,10 +1,10 @@
 @import url(https://fonts.googleapis.com/css2?family=Paytone+One&display=swap);
-/* @import url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap); */
 @import url(https://fonts.googleapis.com/css2?family=Inter&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap);
-
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -17,11 +17,12 @@ body {
 .navbar::before {
   content: "";
   position: absolute;
-  background: transparent;
-  width: 80px;
+  background: #fff;
+  width: 106px;
   height: 80px;
-  left: -66px;
-  border-radius: 50%;
+  left: -90px;
+  z-index: 1;
+  border-radius: 100px;
 }
 .paytone-one {
   font-family: 'Paytone One', sans-serif;
@@ -61,5 +62,10 @@ body {
 @media (min-width: 1000px) {
   .hero {
     background-position: center center;
+  }
+}
+@media (max-width: 1024px) {
+  .navbar::before {
+    background: transparent;
   }
 }
