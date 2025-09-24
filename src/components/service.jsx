@@ -17,7 +17,7 @@ function Service() {
                 <h3 className="font-[500] text-[20px] md:text-[35px] leading-[122%] text-center mb-[20px] md:mb-[35px]">{t("serviceHeader")}</h3>
                 <div className="flex justify-center flex-wrap gap-[14px]">
                     {servicesData.map(item => (
-                        <div data-aos="fade-up"  key={item.title} className="bg-[#F3F3F3] max-w-[341px] rounded-[50px] box-shadow overflow-hidden">
+                        <div key={item.title} className="bg-[#F3F3F3] max-w-[341px] rounded-[50px] box-shadow overflow-hidden">
                             <div className="bg-[#1A00E1] h-[95px]  rounded-tl-[50px] rounded-tr-[50px] flex justify-center items-center">
                                 <img src={item.img} alt={item.title} />
                             </div>

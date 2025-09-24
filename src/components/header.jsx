@@ -24,11 +24,11 @@ function Header() {
 
   return (
     <header className="px-3 md:px-10 py-[10px] fixed w-full z-100">
+        <div><Toaster position="top-right" reverseOrder={false}/></div>
         <div className="max-w-[1368px] mx-auto flex items-center justify-between gap-[10px]">
-            <a href="/" className="z-100 lg:flex hidden shrink-0">
+            <a href="/" className="z-100 lg:flex hidden shrink-0 bg-[#fff] rounded-[50%]">
                 <img src="/images/logo.svg" alt="logo"/>
             </a>
-            <div><Toaster position="top-right" reverseOrder={false}/></div>
             <div className="bg-[#10186D] z-20 relative navbar px-[20px] py-[10px] lg:p-[10px] lg:w-full rounded-[17px] flex items-center justify-between">
                 <a href="/" className="max-[600px]:text-[20px] text-nowrap text-[35px] font-[400] text-[#fff] lg:ml-[27px] paytone-one cursor-pointer">OMON TRANS</a>
                 <div className="flex gap-[10px]">
