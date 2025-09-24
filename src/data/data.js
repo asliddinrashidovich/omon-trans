@@ -3,107 +3,106 @@ import { GoHomeFill } from "react-icons/go";
 import { MdGroup, MdHomeRepairService } from "react-icons/md";
 import { FaStar } from "react-icons/fa6";
 
-
-export const navbar = [
+export const navbar = (t) => [
     {
-        title: "Bosh Sahifa",
-        icon: GoHomeFill
+        title: t('home'),
+        icon: GoHomeFill,
     },
     {
-        title: "Biz Haqimizda",
-        icon: IoInformationCircle
+        title: t("about"),
+        icon: IoInformationCircle,
     },
     {
-        title: "Xizmatlar",
+        title: t("service"),
         icon: MdHomeRepairService
     },
     {
-        title: "Afzalliklar",
-        icon: FaStar
+        title: t("feature"),
+        icon: FaStar,
     },
     {
-        title: "Hamkorlar",
-        icon: MdGroup
+        title: t("partners"),
+        icon: MdGroup,
     },
 ]
 
-export const services = [
+export const services = t => [
     {
-        title: "Shaxardan Shaharga Yuk Tashish",
+        title: t("service1Title"),
         img: "/images/Vector.svg",
-        paragraph: "O'zbekistonning barcha shaharlari oralig'ida tez va xavfsiz yuk tashish xizmati.",
+        paragraph: t("service1Text"),
         lists: [
-            {title: "Keng avtopark"},
-            {title: "Har qanday hajmdagi yuklar"},
-            {title: "Kunlik yetkazib berish"},
-            {title: "Real vaqtda kuzatish"},
+            {title: t("service1List1")},
+            {title: t("service1List2")},
+            {title: t("service1List3")},
+            {title: t("service1List4")},
         ]
     },
     {
-        title: "Xalqaro Yuk Tashish",
+        title: t("service2Title"),
         img: "/images/Vector1.svg",
-        paragraph: "Xalqaro logistika yechimlari. Qo'shni mamlakatlar va uzoq xorizonga yuk tashish.",
+        paragraph: t("service2Text"),
         lists: [
-            {title: "Boj xizmatlari"},
-            {title: "Xalqaro hamkorlar"},
-            {title: "Sug'urta xizmati"},
-            {title: "50+ mamlakatga yetkazish"},
+            {title: t("service2List1")},
+            {title: t("service2List2")},
+            {title: t("service2List3")},
+            {title: t("service2List4")},
         ]
     },
     {
-        title: "Tezkor Yetkazib Berish",
+        title: t("service3Title"),
         img: "/images/Vector2.svg",
-        paragraph: "Kichik yuklar va hujjatlar uchun tezkor yetkazib berish xizmati.",
+        paragraph: t("service3Text"),
         lists: [
-            {title: "24 soatlik yetkazish"},
-            {title: "Kuzatish tizimi"},
-            {title: "SMS-xabarnomalar"},
-            {title: "Qo'shimcha xizmatlar"},
+            {title: t("service3List1")},
+            {title: t("service3List2")},
+            {title: t("service3List3")},
+            {title: t("service3List4")},
         ]
     },
     {
-        title: "Maxsus Yuk Tashish",
+        title: t("service4Title"),
         img: "/images/Vector3.svg",
-        paragraph: "Murakkab shakldagi yoki maxsus sharoit talab qiladigan yuklar uchun xizmat.",
+        paragraph: t("service4Text"),
         lists: [
-            {title: "Sovutgichli transport"},
-            {title: "Xavfli yuklar"},
-            {title: "Qimmatbaho yuklar"},
-            {title: "Yengil avtomobillar tashish"},
+            {title: t("service4List1")},
+            {title: t("service4List2")},
+            {title: t("service4List3")},
+            {title: t("service4List4")},
         ]
     },
     {
-        title: "Sklad va Saqlash Xizmati",
+        title: t("service5Title"),
         img: "/images/Vector4.svg",
-        paragraph: "Yuklaringizni xavfsiz saqlash va boshqarish uchun zamonaviy sklad xizmatlari.",
+        paragraph: t("service5Text"),
         lists: [
-            {title: "Zamonaviy skladlar"},
-            {title: "Haroratni nazorat qilish"},
-            {title: "Xavfsizlik tizimlari"},
-            {title: "Inventarizatsiya boshqaruvi"},
+            {title: t("service5List1")},
+            {title: t("service5List2")},
+            {title: t("service5List3")},
+            {title: t("service5List4")},
         ]
     },
 ]
 
-export const feature = [
+export const feature = t => [
     {
-        title: "Ishonchlilik",
-        text: "Biz yuklaringizni o‘z zimmasiga olgan holda, ularga to‘liq mas’uliyat bilan qaramiz. Har bir jo‘natma barcha mumkin bo‘lgan xavflardan himoyalangan va sug‘urta qoplomi ostidadir. Bu sizga bizning xizmatimizga ishonchingiz komil bo‘lishi uchun asos yaratadi. Xavfsizlik – bu bizning ishimizning eng muhim tamalidir.",
+        title: t("feature1Title"),
+        text: t("feature1Text"),
         img: "/images/feature5.svg"
     },
     {
-        title: "24/7 Qollab quvvatlash",
-        text: "Bizning qo‘llab-quvvatlash xizmatimiz kunning har qanday soati va haftaning har qanday kunida, hatto bayramlarda ham ishlaydi. Yuklaringiz holati to‘g‘risida doimiy yangilanishlar olishingiz va istalgan payt savollaringizga javob olishingiz mumkin. Biz sizga doimiy aloqa va aniq monitoring xizmatini taqdim etamiz.",
+        title: t("feature2Title"),
+        text: t("feature2Text"),
         img: "/images/feature6.svg"
     },
     {
-        title: "Global Hamkorlar",
-        text: "Dunyoning 50 dan ortiq mamlakatlaridagi keng hamkorlik tarmog‘imiz tufayli biz xalqaro jo‘natmalarni eng yuqori darajada amalga oshiramiz. Bu hamkorlik tarmog‘i bizga yuklaringizni tez, ishonchli va samarali tarzda istalgan joyga etkazib berish imkoniyatini beradi. Bizning global qamrovimiz – bu sizning ishonchingiz.",
+        title: t("feature3Title"),
+        text: t("feature3Text"),
         img: "/images/feature7.svg"
     },
     {
-        title: "Zamonaviy Texnologiyalar",
-        text: "Biz yuklaringizni harakatlanishi davomida ilg‘or texnologiyalar yordamida doimiy kuzatib boramiz. Real vaqt rejimida yukingizning aniq joylashuvi va holati haqida ma’lumot olishingiz mumkin. Bu sizga qulaylik va ishonch yaratadi, chunki siz har doim yukingiz to‘g‘risida to‘liq ma’lumotga egasiz.",
+        title: t("feature4Title"),
+        text: t("feature4Text"),
         img: "/images/feature8.svg"
     },
 ]

@@ -2,16 +2,25 @@ import { useState } from "react";
 import { navbar } from "../data/data"
 import { TiArrowSortedDown } from "react-icons/ti";
 import HeaderSidebar from "./sidebar";
+import { useDispatch } from "react-redux";
+import { setLanguage } from "../reducers/languageSlice";
+import { useTranslation } from "react-i18next";
 
 
 function Header() {
     const [langOpen, setLangOpen] = useState(false)
     const [lang, setLang] = useState("uz")
+    const dispatch = useDispatch();
+    const {t} = useTranslation()
+    const NavbarData = navbar(t)
 
+    console.log(NavbarData  )
     const handleChangeLang = (language) => {
         setLangOpen(prev => !prev)
         setLang(language)
+        dispatch(setLanguage(language));
     }
+
   return (
     <header className="px-3 md:px-10 py-[10px] fixed w-full z-100">
         <div className="max-w-[1368px] mx-auto flex items-center justify-between gap-[10px]">
@@ -22,7 +31,7 @@ function Header() {
                 <a href="/" className="max-[600px]:text-[20px] text-nowrap text-[35px] font-[400] text-[#fff] lg:ml-[27px] paytone-one cursor-pointer">OMON TRANS</a>
                 <div className="flex gap-[10px]">
                     <ul className="min-[1250px]:flex items-center gap-[10px] hidden">
-                        {navbar.map(item => (
+                        {NavbarData.map(item => (
                             <li key={item.title} className="relative  inline-block group">
                                 <a href={`#${item.title}`} className="font-montserrat font-[500] text-[16px] text-[#fff] leading-[122%] hover:text-[#ffb48f] translate-all duration-300 ">{item.title}</a>
                                 <span className="absolute left-0 -bottom-1 rounded-[2px] h-[3px] w-0 bg-[#ffb48f] transition-all duration-300 group-hover:w-full"></span>
@@ -30,13 +39,13 @@ function Header() {
                         ))}
                     </ul>
                     <div className="relative lg:flex hidden">
-                        <div onClick={() => setLangOpen(prev => !prev)} className="bg-[#1E2AAE] py-[15px] px-[14px] cursor-pointer rounded-[17px] border-[1px] border-[#049BD2] flex items-center gap-[10px]">
+                        <div onClick={() => setLangOpen(true)} className="bg-[#1E2AAE] lang-select py-[15px] px-[14px] cursor-pointer rounded-[17px] border-[1px] border-[#049BD2] flex items-center gap-[10px]">
                             {lang == "uz" && <img src="/images/uzbekistan.png" alt="uzbekistan" className="w-[25px]"/>}
                             {lang == "ru" && <img src="/images/russia.png" alt="uzbekistan" className="w-[25px]"/>}
                             {lang == "en" && <img src="/images/united-states.png" alt="uzbekistan" className="w-[25px]"/>}
                             <TiArrowSortedDown className="text-[#fff] text-[22px]"/>
                         </div>
-                        {langOpen && <div className="absolute bg-[#999] top-[50px] rounded-[10px] p-[10px]">
+                        {langOpen && <div className="absolute lang-box bg-[#999] top-[50px] rounded-[10px] p-[10px]">
                             <div onClick={() => handleChangeLang("uz")} className="flex items-center gap-[7px] px-[10px] hover:bg-[#888] py-[5px] cursor-pointer rounded-[10px] mb-[4px]">
                                 <img src="/images/uzbekistan.png" alt="uzbekistan" className="w-[25px]"/>
                                 <p className="pr-[25px]">uzb</p>
@@ -51,7 +60,7 @@ function Header() {
                             </div>
                         </div>}
                     </div>
-                    <button className="lg:flex hidden py-[19px] active:bg-[#1E2AAE] translate-all duration-100 hover:bg-[#1425df] px-[32px] bg-[#1E2AAE] border-[#049BD2] text-[#fff] text-[20px] leading-[100%] font-[400] border-[1px] font-montserrat rounded-[17px] cursor-pointer">{"Bog'lanish"}</button>
+                    <button className="lg:flex hidden py-[19px] active:bg-[#1E2AAE] translate-all duration-100 hover:bg-[#1425df] px-[32px] bg-[#1E2AAE] border-[#049BD2] text-[#fff] text-[20px] leading-[100%] font-[400] border-[1px] font-montserrat rounded-[17px] cursor-pointer">{t('boglanish')}</button>
                 </div>
             </div>
             <div className="flex items-center gap-[10px]">

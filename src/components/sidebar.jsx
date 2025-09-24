@@ -3,6 +3,7 @@ import { FaBars } from "react-icons/fa"
 import { ImCross } from "react-icons/im"
 import { navbar } from "../data/data"
 import { TiArrowSortedDown } from "react-icons/ti"
+import { useTranslation } from "react-i18next"
 
 function HeaderSidebar() {
     const [openSidebar, setOpenSideBar] = useState(false)
@@ -10,6 +11,8 @@ function HeaderSidebar() {
     function handleClose() {setOpenSideBar(false)}
     const [langOpen, setLangOpen] = useState(false)
     const [lang, setLang] = useState("uz")
+    const {t} = useTranslation()
+    const NavbarData = navbar(t)
 
     const handleChangeLang = (language) => {
         setLangOpen(prev => !prev)
@@ -29,7 +32,7 @@ function HeaderSidebar() {
                 </button>
             </div>
             <div className="flex justify-center items-center gap-[22px] flex-col mt-[30px]">
-                {navbar.map(item => {
+                {NavbarData.map(item => {
                     const Icon = item.icon;
                     return (
                         <div onClick={handleClose} key={item.title} className="flex  gap-[7px] group">
@@ -62,7 +65,7 @@ function HeaderSidebar() {
                 </div>}
             </div>
             <div className="flex justify-center mt-[20px]">
-                <button className="w-full justify-center flex min-[440px]:hidden max-[600px]:py-[17px] py-[25px] active:bg-[#1E2AAE] translate-all duration-100 hover:bg-[#1425df] px-[32px] bg-[#1E2AAE] border-[#049BD2] max-[600px]:text-[15px] text-[#fff] text-[20px] leading-[100%] font-[400] border-[1px] font-montserrat rounded-[17px] cursor-pointer">{"Bog'lanish"}</button>
+                <button className="w-full justify-center flex min-[440px]:hidden max-[600px]:py-[17px] py-[25px] active:bg-[#1E2AAE] translate-all duration-100 hover:bg-[#1425df] px-[32px] bg-[#1E2AAE] border-[#049BD2] max-[600px]:text-[15px] text-[#fff] text-[20px] leading-[100%] font-[400] border-[1px] font-montserrat rounded-[17px] cursor-pointer">{t("boglanish")}</button>
             </div>
         </div>}
         {openSidebar && <div onClick={handleClose} className="fixed top-0 left-0 bottom-0 bg-black/50 w-[100%] brightness-50 z-20"></div>}

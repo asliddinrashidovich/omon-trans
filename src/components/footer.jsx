@@ -1,4 +1,9 @@
+import { useTranslation } from "react-i18next"
+import { navbar } from "../data/data"
+
 function Footer() {
+    const {t} = useTranslation()
+    const FooterData = navbar(t)
   return (
     <footer className="bg-[#10186D] relative pt-[90px] md:pt-[129px] rounded-tl-[50px] md:rounded-tl-[100px] rounded-tr-[50px] md:rounded-tr-[100px]">
         <div className="z-[10] absolute top-0 left-[50%] translate-x-[-50%] w-[150px] md:w-[200px] mx-auto">
@@ -7,7 +12,7 @@ function Footer() {
         <div className="px-[24px] md:px-[80px] flex min-[900px]:flex-row flex-col gap-[40px] md:gap-[106px] ">
             <div className="min-[900px]:max-w-[445px]">
                 <h3 className="text-[27px] font-[700] leading-[122%] text-[#fff] mb-[25px]">OMON-TRANS</h3>
-                <p className="text-[20px] font-[500] leading-[122%] text-[#fff] mb-[25px]">Yirik korxonalar uchun ishonchli logistika va transport yechimlari. Global miqyosda sifatli xizmat.</p>
+                <p className="text-[20px] font-[500] leading-[122%] text-[#fff] mb-[25px]">{t("footerTitle")}</p>
                 <div className="flex gap-5 items-center">
                     <a href="#">
                         <img src="/images/instagram.png" alt="instagram" />
@@ -24,7 +29,7 @@ function Footer() {
                 </div>
             </div>
             <div>
-                <h3 className="text-[27px] font-[700] leading-[122%] text-[#fff] mb-[25px]">{`Aloqa Ma'lumotlari`}</h3>
+                <h3 className="text-[27px] font-[700] leading-[122%] text-[#fff] mb-[25px]">{t("footerContact")}</h3>
                 <div className="flex gap-[8px] mb-[10px] items-center">
                     <img src="/images/location.svg" alt="location" />
                     <p className="text-[20px] font-[500] text-[#fff] leading-[122%]">Toshkent sh., Yunusobod t., 12-uy</p>
@@ -39,32 +44,22 @@ function Footer() {
                 </div>
                 <div className="flex gap-[8px] mb-[10px] items-center">
                     <img src="/images/clock.svg" alt="location" />
-                    <p className="text-[20px] font-[500] text-[#fff] leading-[122%]">Dushanba - Shanba: 9:00 - 18:00</p>
+                    <p className="text-[20px] font-[500] text-[#fff] leading-[122%]">{t("footerDate")}</p>
                 </div>
             </div>
             <div>
                 <h3 className="text-[27px] font-[700] leading-[122%] text-[#fff] mb-[25px]">{`Tezkor Havolalar `}</h3>
                 <ul>
-                    <li className="mb-[10px]">
-                        <a className="text-[20px] font-[500] leading-[122%] text-[#fff]" href="#">Bosh Sahifa</a>
-                    </li>
-                    <li className="mb-[10px]">
-                        <a className="text-[20px] font-[500] leading-[122%] text-[#fff]" href="#">Biz Haqimizda</a>
-                    </li>
-                    <li className="mb-[10px]">
-                        <a className="text-[20px] font-[500] leading-[122%] text-[#fff]" href="#">Xizmatlar</a>
-                    </li>
-                    <li className="mb-[10px]">
-                        <a className="text-[20px] font-[500] leading-[122%] text-[#fff]" href="#">Afzalliklar</a>
-                    </li>
-                    <li className="mb-[10px]">
-                        <a className="text-[20px] font-[500] leading-[122%] text-[#fff]" href="#">Hamkorlar</a>
-                    </li>
+                    {FooterData.map(item => (
+                        <li key={item.title} className="mb-[10px]">
+                            <a className="text-[20px] font-[500] leading-[122%] hover:text-[#049BD2] translate-all duration-200 text-[#fff]" href={`#${item.title}`}>{item.title}</a>
+                        </li>
+                    ))}
                 </ul>
             </div>
         </div>
         <hr className="border-[2px] mt-[15px] border-[#FFFFFF]"/>
-        <p className="text-[#ADADAD] leading-[122%] font-[500] text-[12px] md:text-[20px] text-center py-[15px]">© 2025 OMON TRANS. Barcha huquqlar himoyalangan.</p>
+        <p className="text-[#ADADAD] leading-[122%] font-[500] text-[12px] md:text-[20px] text-center py-[15px]">{t("footerFooter")}</p>
     </footer>
   )
 }

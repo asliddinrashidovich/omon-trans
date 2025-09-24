@@ -11,6 +11,9 @@ body {
   background-color: #F4F4F6;
 }
 
+.marked-text {
+  color: #1A00E1;
+}
 .navbar::before {
   content: "";
   position: absolute;
