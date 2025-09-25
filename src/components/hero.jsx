@@ -14,7 +14,7 @@ function Hero() {
   return (
     <section id="Bosh Sahifa"  className="px-3 md:px-10 py-[10px] hero h-[100vh] lg:h-[840px]">
         <div className="max-w-[1368px] mx-auto flex lg:items-center h-full">
-            <div  className="max-w-[500px] md:max-w-[658px] mt-[150px] lg:mt-[0]">
+            <div data-aos="fade-up" className="max-w-[500px] md:max-w-[658px] mt-[150px] lg:mt-[0]">
                 <h1 dangerouslySetInnerHTML={{ __html: t("heroHeader") }} className="text-[25px] min-[370px]:text-[35px] min-[500px]:text-[40px] md:text-[55px] fnt-inter font-[800] leading-[122%] mb-[10px]" />
                 <p className="text-[#000000] text-[15px] md:text-[20px] font-[400] leading-[122%] mb-[10px]">{t("heroText")}</p>
                 <div className="flex min-[370px]:flex-row flex-col min-[370px]:items-center gap-[15px] ">

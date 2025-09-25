@@ -14,20 +14,8 @@ body {
 .marked-text {
   color: #1A00E1;
 }
-/* .navbar::before {
-  content: "";
-  position: absolute;
-  background: #fff;
-  width: 106px;
-  height: 80px;
-  left: -90px;
-  z-index: 1;
-  border-radius: 100px;
-} */
  .navbar {
-  /* clip-path: polygon(30px 0, 100% 0, 100% 100%, 30px 100%, 0 30px); */
-  /* clip-path: polygon(0 0, 95% 0, 85% 50%, 95% 100%, 0 100%); */
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 1% 51%)
+  clip-path: polygon(0 0, 100% 0, 100% 400%, 0 100%, 1% 51%)
  }
 .paytone-one {
   font-family: 'Paytone One', sans-serif;
@@ -69,11 +57,8 @@ body {
     background-position: center center;
   }
 }
-/* @media (max-width: 1024px) {
-  .navbar::before {
-    background: transparent;
-    width: 0;
-    height: 0;
-    z-index: 1;
+@media (max-width: 1024px) {
+  .navbar {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 0% 0%)
   }
-} */
+}

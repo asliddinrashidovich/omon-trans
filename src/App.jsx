@@ -1,23 +1,21 @@
-import About from "./components/about"
-import Contact from "./components/contact"
-import Feature from "./components/feature"
-import Footer from "./components/footer"
-import Header from "./components/header"
-import Hero from "./components/hero"
-import Partners from "./components/partners"
-import Service from "./components/service"
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom"
+import MainLayout from "./layout/main-layout"
+import HomePage from "./page/home-page"
 
 function App() {
+  const routes = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<MainLayout/>}>
+        <Route index element={<HomePage/>}/>
+        <Route path="uz" element={<HomePage/>}/>
+        <Route path="ru" element={<HomePage/>}/>
+        <Route path="en" element={<HomePage/>}/>
+      </Route>
+    )
+  )
   return (
     <>
-      <Header/> 
-      <Hero/>
-      <About/>
-      <Service/>
-      <Feature/>
-      <Partners/>
-      <Contact/>
-      <Footer/>
+      <RouterProvider router={routes}/>
     </>
   )
 }
