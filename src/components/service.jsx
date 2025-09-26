@@ -5,7 +5,7 @@ function Service() {
     const {t} = useTranslation()
     const servicesData = services(t)
   return (
-    <section id="Xizmatlar" className="px-3 md:px-10 pb-[40px] md:pb-[70px]">
+    <section id="service" className="px-3 md:px-10 pb-[40px] md:pb-[70px]">
         <div className="max-w-[1368px] mx-auto">
             <div data-aos="fade-up" className="flex justify-center">
                 <div className="flex justify-center flex-col items-center mb-[28px] md:mb-[70px] py-[10px] sm:py-[15px] px-[40px] sm:px-[60px] text-center bg-[#1A00E1] rounded-[35px] w-full md:w-auto">

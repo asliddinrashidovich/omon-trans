@@ -4,32 +4,34 @@ import { ImCross } from "react-icons/im"
 import { navbar } from "../data/data"
 import { TiArrowSortedDown } from "react-icons/ti"
 import { useTranslation } from "react-i18next"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { setLanguage } from "../reducers/languageSlice"
-import { useLocation } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 function HeaderSidebar() {
-    const location = useLocation()
-    const path = location.pathname.slice(1) || "uz"
-    const [lang, setLang] = useState(path)
     const [openSidebar, setOpenSideBar] = useState(false)
     function handleOpen() {setOpenSideBar(true)}
     function handleClose() {setOpenSideBar(false)}
+    
     const dispatch = useDispatch();
-    const [langOpen, setLangOpen] = useState(false)
-    const {t} = useTranslation()
-    const NavbarData = navbar(t)
+    const { t } = useTranslation();
+    const navigate = useNavigate();
+
+    const lang = useSelector((state) => state.language.lang); 
+    const [langOpen, setLangOpen] = useState(false);
+
+    const NavbarData = navbar(t);
 
     const handleChangeLang = (language) => {
-        setLangOpen(prev => !prev)
-        setLang(language)
-        dispatch(setLanguage(language));
+        setLangOpen(false);
+        dispatch(setLanguage(language)); 
+        navigate(`/${language}`);
     }
 
   return (
     <div className="min-[1250px]:hidden flex">
-        <button onClick={handleOpen} className="max-[450px]:rounded-[10px] max-[450px]:py-[8px] min-[1250px]:hidden flex max-[600px]:py-[9px] max-[600px]:px-[20px] py-[20px] lg:py-[24px] px-[32px] bg-[#10186D] border-[#049BD2] text-[#fff]  text-[20px] leading-[100%] font-[400] border-[1px] font-montserrat rounded-[17px] cursor-pointer">
-            <FaBars className="text-[30px] max-[450px]:text-[15px] "/>
+        <button onClick={handleOpen} className="max-[450px]:px-[10px] min-[1250px]:hidden flex max-[600px]:py-[9px] max-[600px]:px-[20px] py-[20px] lg:py-[24px] px-[32px] bg-[#10186D] border-[#049BD2] text-[#fff]  text-[20px] leading-[100%] font-[400] border-[1px] font-montserrat rounded-[17px] cursor-pointer">
+            <FaBars className="text-[30px] "/>
         </button>
         {<div className={`fixed top-0 ${openSidebar ? "translate-x-0" : "translate-x-[100%]"} transition-liniar duration-200  right-0 bottom-0 menu bg-[#fff] w-full md:w-[40%] z-30 p-[37px]`}>
             <div className="flex items-center justify-between">
@@ -42,10 +44,10 @@ function HeaderSidebar() {
                 {NavbarData.map(item => {
                     const Icon = item.icon;
                     return (
-                        <div onClick={handleClose} key={item.title} className="flex  gap-[7px] group">
+                        <a href={`#${item.slug}`} onClick={handleClose} key={item.title} className="flex  gap-[7px] group">
                             <Icon size={20} className="text-[#262525] translate-all duration-200 group-hover:text-[#1A00E1]"/>
                             <p className="text-[16px] text-[#262525] group-hover:text-[#1A00E1] font-[500] leading-[122%] cursor-pointer translate-all duration-200">{item.title}</p>
-                        </div>
+                        </a>
                     )
                 })}
             </div>

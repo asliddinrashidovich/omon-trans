@@ -7,22 +7,27 @@ export const navbar = (t) => [
     {
         title: t('home'),
         icon: GoHomeFill,
+        slug: "home" 
     },
     {
         title: t("about"),
         icon: IoInformationCircle,
+        slug: "about" 
     },
     {
         title: t("service"),
-        icon: MdHomeRepairService
+        icon: MdHomeRepairService,
+        slug: "service" 
     },
     {
         title: t("feature"),
         icon: FaStar,
+        slug: "feature" 
     },
     {
         title: t("partners"),
         icon: MdGroup,
+        slug: "partners"
     },
 ]
 

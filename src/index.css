@@ -4,6 +4,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -51,7 +52,17 @@ body {
   backdrop-filter: blur(10px);  
   -webkit-backdrop-filter: blur(10px); 
 }
-
+.react-international-phone-country-selector button {
+  background-color: transparent;
+  border: none;
+}
+.react-international-phone-input {
+  background-color: transparent !important;
+  border: none !important;
+  font-size: 17px !important; 
+  font-weight: 400 !important;
+  color: #ACA6A6 !important;
+}
 @media (min-width: 1000px) {
   .hero {
     background-position: center center;

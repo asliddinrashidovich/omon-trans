@@ -4,6 +4,8 @@ import en from './locales/en/translation.json';
 import uz from './locales/uz/translation.json';
 import ru from './locales/ru/translation.json';
 
+const savedLang = localStorage.getItem("language") || "uz";
+
 i18n
   .use(initReactI18next)
   .init({
@@ -12,11 +14,11 @@ i18n
       uz: { translation: uz },
       ru: { translation: ru },
     },
-    lng: 'uz', 
-    fallbackLng: 'uz',
+    lng: savedLang,  
+    fallbackLng: "uz",
     interpolation: {
-      escapeValue: false
-    }
+      escapeValue: false,
+    },
   });
 
 export default i18n;
